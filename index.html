@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lett Security Service</title>
+  <meta name="description" content="Professional security services and PSIRA-accredited training in South Africa.">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: goldenrod;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    #menu-icon {
+      display: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      background: url("guard-820x1024.png") no-repeat center center/cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      padding: 40px 20px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      margin: 20px 0;
+    }
+    
+    .container {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.sec-text {
+  color: #f39c2b;   
+  border-right: 3px solid #f39c2b;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(15, end) infinite alternate;
+}
+    .lead {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: goldenrod;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: darkgoldenrod;
+    }
+
+    .hero-form {
+      margin-top: 20px;
+    }
+
+    .hero-form input {
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      width: 250px;
+      font-size: 1rem;
+    }
+
+    /* Overview Section */
+    .overview {
+      padding: 60px 20px;
+      text-align: center;
+      background: white;
+    }
+
+    .overview h2 {
+      margin-top: 5px;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: black;
+    }
+
+    .overview h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .overview .service-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30vh;
+      padding: 50px 20px;
+      background-color: white;
+      gap: 2.5rem;
+    }
+    
+    /* services */
+.services {
+  padding: 60px 20px;
+  background: white;
+}
+
+.services-box {
+  background: #111;       /* dark gray box */
+  padding: 30px;
+  border-radius: 12px;
+  text-align: left;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.services h2{
+  text-align: center;
+  font-size: 4rem;
+  color: black;
+  margin-bottom: 10px;
+  margin-top: 1px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    padding: 50px 20px;
+    background-color: white;
+  gap: 2.5rem;
+}
+
+
+
+.services-box {
+    background-color: red;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 30px 25px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.services-box i {
+    font-size: 50px;
+    color: goldenrod;
+    margin-bottom: 15px;
+}
+
+.services-box h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.services-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+}
+
+
+    .cta-button {
+      display: inline-block;
+      background: red;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .cta-button:hover {
+      background: goldenrod;
+    }
+
+   .cta-button {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+.contact h2{
+  margin-top: 5px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.contact p {
+  text-align: center;
+}
+
+.contact .services-box {
+  margin-top: 300px;
+}
+
+#section.register {
+  max-width: 1000px;
+}
+
+section.register {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 300px;
+}
+
+section.register h2 {
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+section.register p {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+form {
+  display: grid;
+  gap: 18px;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px 20px;
+}
+
+legend {
+  font-weight: bold;
+  color: #333;
+  padding: 0 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn {
+  background: red;
+  color: #ddd;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: goldenrod;
+}
+
+.map-container {
+  margin: 40px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Floating WhatsApp button */
+.whatsapp-float{
+  position: fixed;
+  right: 20px;              /* distance from right edge */
+  bottom: 20px;             /* distance from bottom */
+  width: 56px;
+  height: 56px;
+  background: #25D366;      /* WhatsApp green */
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(37,211,102,0.25);
+  z-index: 9999;
+  text-decoration: none;
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+  opacity: 1;
+}
+
+/* hover/focus */
+.whatsapp-float:hover,
+.whatsapp-float:focus{
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(37,211,102,0.28);
+  outline: none;
+}
+
+/* make SVG inside scale nicely */
+.whatsapp-float svg{
+  display:block;
+}
+
+/* smaller on very small screens so it doesn't block content */
+@media (max-width: 420px){
+  .whatsapp-float{
+    right: 14px;
+    bottom: 14px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: goldenrod;
+  color: #777;
+  font-size: 14px;
+}
+
+    @media (max-width: 768px) {
+      #menu-icon {
+        display: block;
+      }
+
+      .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: black;
+        padding: 15px;
+        border-radius: 8px;
+      }
+      .navbar.active {
+        display: flex;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+ 
+  <!-- Header -->
+ 
+  <header class="header">
+    <a href="#" class="logo">Lett Security Service</a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar" id="navbar">
+      <a href="#" class="active">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Services</a>
+      <a href="#">Alarm Response</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+ 
+  <div class="hero" role="banner" aria-label="Hero — Professional security you can trust">
+    <div class="hero-inner">
+
+      <div class="container"> <span class="text first-text">Phuthaditjaba </span> <span class="text sec-text"></span> </div>
+
+      <h1 class="hero-title">
+        Professional <span class="break">Security</span> You Can Trust
+      </h1>
+      <p class="lead">
+        Protecting what matters most with experienced security professionals, advanced technology, and 24/7 reliable service across South Africa.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tel:0649009305" aria-label="Call for a free quote">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.28 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.08 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72c.12.9.36 1.76.7 2.57a2 2 0 0 1-.45 2.11L9.91 9.91a14.39 14.39 0 0 0 6 6l1.5-1.5a2 2 0 0 1 2.11-.45c.81.34 1.67.58 2.57.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span>Get Free Quote Now</span>
+        </a>
+      </div>
+
+      <a href=" https://thahbowh.github.io/Lett-Security-Academy/" class="btn">Lett Security Academy</a>
+    </div>
+  </div>
+
+
+  <!-- Overview Section -->
+
+  <section id="overview" class="overview">
+    <h2><strong>Why choose Us?</strong></h2>
+    <p><strong>Lett Security Academy</strong> — Is a premium security solutions provider, offering professional guarding services, <strong>Alarm response,</strong> and <strong>Comprehensive Security Training.</strong> Our expertise ensures the safety and security of business, individuals, and communities. </p>
+    
+    <div class="service-container black-box">
+    <div class="services-box">
+    <i class='bx bx-badge-check'></i> 
+    <h3>Psira Certified</h3>
+    <p>Fully licensed and compliant with all South African security regulations and standards</p>
+    </div>
+    </div> 
+
+    <div class="service-container">
+    <div class="services-box">
+    <i class='bx bx-time-five'></i> 
+    <h3>24/7 Availability</h3>
+    <p>Round-the-clock security services with immediate response capabilities</p>
+    </div>
+    </div>
+
+    <div class="service-container">
+    <div class="services-box">
+    <i class='bx bx-group'></i>   
+    <h3>Expert Team</h3>
+    <p>Highly trained security professionals with extensive experince</p>
+    </div>
+    </div>
+    
+    <a href="AboutUs.html" class="cta-button">About Us</a>
+  </section>
+
+  <!-- Services Section -->    
+  <section id="services" class="services">
+    <h2> Our Security Service</h2>
+    <div class="service-container">
+      <div class="services-box">
+        <i class='bx bx-shield-quarter'></i>
+        <h3>Armed & Unarmed Guarding</h3>
+        <p>Professional security personnel for residential, commercial, and event security needs.</p>
+      </div>
+    </div>
+
+    <div class="service-container">
+      <div class="services-box">
+        <i class='bx bx-alarm'></i>
+        <h3>Alarm Response</h3>
+        <p>Rapid response to alarm activations with trained security officers and advanced technology.</p>
+      </div>
+    </div>
+
+    <div class="service-container">
+      <div class="services-box">
+        <i class='bx bx-book-reader'></i>
+        <h3>Security Training</h3>
+        <p>PSIRA-accredited training programs for aspiring security professionals and ongoing staff development.</p>
+      </div>
+    </div>
+
+    <a href="services.html" class="cta-button">View All Services</a>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="contact" >
+    <h2><strong>Get Your Free Security Assessment</strong></h2>
+    <p>Contact us today for a comprehensive security evaluation and customized protection plan.</p>
+    <div class="service-container">
+    <div class="services-box">
+      <h3>Contact Information</h3>
+
+      <div class="contact-item">
+        <i class='bx bx-phone-call'></i>
+        <p><strong>24/7 Emergency Hotline:</strong> +27 73 579 6573</p>
+      </div>
+
+      <div class="contact-item">
+        <i class="bx bx-whatsapp"></i>
+        <p><strong>WhatsApp Business:</strong> +27 81 382 6643</p>
+      </div>
+
+      <div class="contact-item">
+        <i class='bx bx-envelope'></i>
+        <p><strong>Email Us:</strong> lethimanthashe@gmail.com</p>
+      </div>
+
+      <div class="contact-item">
+        <i class='bx bx-location-plus'></i>
+        <p><strong>Visit Our Office:</strong> Office Block K341, Naledi Mall, Phuthaditjhaba, 9870</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="register" class="register">
+  <h2>Get your free quotes Assessment</h2>
+  <p>Contact us today for a comprehensive security evaluation and customized protection plan</p>
+
+  <form id="registrationform">
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <label>Full Name:</label>
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <label>Company:</label>
+      <input type="text" name="company" placeholder="Company name" required>
+      
+      <label> Email Adress:</label>
+      <input type="text" name="email adress" placeholder="your@email.com" required>
+
+      <label>Phone Number:</label>
+      <input type="text" name="phone number" placeholder="+27 00 000 0000" required>
+      
+      <label>Security Service Needed</label>
+      <input type="text" name="security service needed" placeholder="e.g Training Academy, Armed Guards, Alarms Response" required>
+      
+      <label>Additinal Details:</label>
+      <input type="text" name="additional details" placeholder="Please descibe your security requirements, location, and any specif needs..." required>
+
+      <button type="submit" class="btn">Get Free Quote</button>
+    </fieldset>
+  </form>
+</section>
+
+     <!-- Your Custom Map -->
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps?q=-28.5207894,28.8177422&hl=es;z=14&output=embed"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+  </section>
+
+  
+<a
+  href="https://wa.me/27813826643?text=Hello%20there!"
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat on WhatsApp"
+>
+  <!-- inline WhatsApp SVG icon -->
+  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+    <path fill="white" d="M20.52 3.48A11.72 11.72 0 0 0 12.01.25c-6.42 0-11.64 5.22-11.64 11.64 0 2.05.54 4.05 1.56 5.78L.25 23.75l6.44-1.67a11.6 11.6 0 0 0 5.32 1.3h.01c6.42 0 11.64-5.22 11.64-11.64a11.6 11.6 0 0 0-3.49-8.16zM12 20.59c-1.77 0-3.49-.48-5.02-1.38l-.36-.21-3.83 1 1-3.74-.24-.38A8.99 8.99 0 0 1 3 12.01c0-5 4.07-9.07 9.07-9.07 2.42 0 4.69.94 6.39 2.64a8.99 8.99 0 0 1-6.46 14.01z"/>
+    <path fill="white" d="M17.14 14.14c-.29-.15-1.7-.84-1.96-.94-.26-.11-.45-.15-.64.15-.19.29-.72.94-.88 1.13-.16.19-.32.21-.61.07-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.33.44-.5.15-.16.2-.27.3-.46.1-.19.05-.36-.03-.51-.08-.15-.64-1.54-.88-2.11-.23-.55-.46-.48-.64-.49l-.55-.01c-.19 0-.5.07-.76.34-.26.27-1 1-1 2.47s1.03 2.88 1.17 3.08c.14.19 2.02 3.08 4.9 4.21 2.01.72 2.77.77 3.77.65.61-.07 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34z"/>
+  </svg>
+</a>
+
+
+<footer>
+  <p>Copyright &copy; 2025 Lett Security Service. All rights reserved.</p>
+</footer>
+
+        <!-- JavaScript for interactivity -->  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-icon");
+      const navbar = document.getElementById("navbar");
+      const navlinks = navbar.querySelectorAll("a");
+
+      toggle.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+      });
+
+      navlinks.forEach(link => {
+        link.addEventListener("click", () => {
+          navbar.classList.remove("active");
+        });
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!navbar.contains(e.target) && !toggle.contains(e.target)) {
+          navbar.classList.remove("active");
+        }
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+

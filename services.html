@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lett Security Service</title>
+  <meta name="description" content="Professional security services and PSIRA-accredited training in South Africa.">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+    /* Header */
+    .header {
+      display: flex;
+      margin-top: 0%;
+      padding-bottom: 0%;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: goldenrod;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    #menu-icon {
+      display: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+    
+
+/* Services Section */
+main, .services {
+  flex: 1; /* takes remaining space between header and footer */
+}
+
+.services {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.services h2 {
+  margin-top: 0%;
+  margin-top: 0%;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #111;
+  position: relative;
+  display: inline-block;
+  margin-top: 0;
+}
+
+.services h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: red;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Grid Layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto 50px;
+}
+
+/* Service Boxes */
+.services-box {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Icons */
+.services-box i {
+  font-size: 3rem;
+  color: red;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Titles */
+.services-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* Paragraphs */
+.services-box p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  display: inline-block;
+  padding: 14px 40px;
+  background: red; /* Security blue */
+  color: #fff;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 119, 182, 0.3);
+}
+
+.cta-button:hover {
+  background: goldenrod; /* Darker shade on hover */
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 119, 182, 0.4);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px 20px;
+  background: goldenrod;
+  color: #fff; /* better contrast */
+  font-size: 14px;
+  flex-shrink: 0; /* prevents shrinking */
+}
+
+
+    @media (max-width: 768px) {
+      #menu-icon {
+        display: block;
+      }
+
+      .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: black;
+        padding: 15px;
+        border-radius: 8px;
+      }
+      .navbar.active {
+        display: flex;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+ 
+  <!-- Header -->
+ 
+  <header class="header">
+    <a href="#" class="logo">Lett Security Service</a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar" id="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Services</a>
+      <a href="#">Alarm Response</a>
+    </nav>
+  </header>
+
+    <!-- Services Section -->
+
+<section id="services" class="services">
+  <h2>Our Security Services</h2>
+
+  <div class="services-grid">
+    <div class="services-box">
+      <i class='bx bx-shield-quarter'></i>
+      <h3>Security Guarding Division</h3>
+      <p>Professional security personnel for residential, commercial, and event security needs.</p>
+    </div>
+
+    <div class="services-box">
+      <i class='bx bx-alarm'></i>
+      <h3>24/7 protection and surveillance</h3>
+      <p>Rapid response to alarm activations with trained security officers and advanced technology.</p>
+    </div>
+
+    <div class="services-box">
+      <i class='bx bx-book-reader'></i>
+      <h3>Security Training Academy</h3>
+      <p>PSIRA-accredited training programs for aspiring security professionals and ongoing staff development.</p>
+    </div>
+
+  <div class="services-box">
+  <i class='bx bx-user-check'></i>
+  <h3>VIP Protection</h3>
+  <p>
+    Discreet and professional close protection services for executives, celebrities, and high-profile clients.
+  </p>
+</div>
+
+<div class="services-box">
+  <i class='bx bx-key'></i>
+  <h3>Access Control & Risk Assessment</h3>
+  <p>
+    Advanced access management and thorough risk assessments to safeguard your business and assets.
+  </p>
+</div>
+
+<div class="services-box">
+  <i class='bx bx-building-house'></i>
+  <h3>Commercial, Residential & Industrial Security</h3>
+  <p>
+    Well-trained security personnel dedicated to protecting businesses, homes, and industrial sites 
+    with 24/7 surveillance and rapid response.
+  </p>
+</div>
+
+  <a href="services.html" class="cta-button">Call To action</a>
+  </div>
+</section>
+
+    
+<footer>
+  <p>Copyright &copy; 2025 Lett Security Service. All rights reserved.</p>
+</footer>
+
+        <!-- JavaScript for interactivity -->  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-icon");
+      const navbar = document.getElementById("navbar");
+      const navlinks = navbar.querySelectorAll("a");
+
+      toggle.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+      });
+
+      navlinks.forEach(link => {
+        link.addEventListener("click", () => {
+          navbar.classList.remove("active");
+        });
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!navbar.contains(e.target) && !toggle.contains(e.target)) {
+          navbar.classList.remove("active");
+        }
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lett Security Service</title>
+  <meta name="description" content="Professional security services and PSIRA-accredited training in South Africa.">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: goldenrod;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .navbar {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    #menu-icon {
+      display: none;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+
+
+
+.about-content {
+  margin: 10px auto;
+}
+
+.about-content h2:first-of-type {
+  margin-top: 10px;
+}
+
+/* About Content Section */
+.about-content {
+  max-width: 1100px;
+  margin: 10px auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Headings */
+.about-content h2 {
+  font-size: 1.8rem;
+  margin: 30px 0 15px;
+  color: #111;
+  border-left: 5px solid goldenrod;
+  padding-left: 12px;
+  font-weight: 700;
+}
+
+.about-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.about-content strong {
+  color: red;
+  font-weight: 600;
+}
+
+/* Services Grid Layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+/* Each Service Box */
+.service-box {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* Service Box Headings */
+.service-box h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  border-left: 4px solid goldenrod;
+  padding-left: 10px;
+}
+
+.service-box h3 {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: red;
+}
+
+/* Service Icons */
+.service-icon {
+  font-size: 3rem;
+  color: #0077b6;
+  margin-bottom: 15px;
+  display: block;
+  text-align: center;
+}
+
+/* Base styling */
+.service-box {
+  position: relative;
+  padding: 25px;
+  border-radius: 12px;
+  color: #fff;
+  overflow: hidden;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+  z-index: 1;
+}
+
+.service-box h2,
+.service-box h3,
+.service-box p {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hover effect */
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Assign background images */
+.guarding {
+  background-image: url("Securityguard.jpeg");
+}
+
+.alarm {
+  background-image: url("Alarm-response.jpg");
+}
+
+.academy {
+  background-image: url("cpr-training.webp");
+}
+
+.firearms {
+  background-image: url("Firearmtraining.webp");
+}
+
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: goldenrod;
+  color: #777;
+  font-size: 14px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+
+    @media (max-width: 768px) {
+      #menu-icon {
+        display: block;
+      }
+
+      .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: black;
+        padding: 15px;
+        border-radius: 8px;
+      }
+      .navbar.active {
+        display: flex;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+ 
+  <!-- Header -->
+ 
+  <header class="header">
+    <a href="#" class="logo">Lett Security Service</a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar" id="navbar">
+      <a href="#" class="active">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Services</a>
+      <a href="#">Alarm Response</a>
+    </nav>
+  </header>
+
+<main class="about-content">
+  <h2><strong>About Company</strong></h2>
+  <p>
+    Lett Security is a premier security solutions provider, offering professional guarding services, 
+    alarm response, and comprehensive security training. Our expertise ensures the safety and security 
+    of businesses, individuals, and communities.
+  </p>
+
+  <h2><strong>Vision</strong></h2>
+  <p>
+    To be the leading security service provider in the industry, recognised for our commitment to quality, 
+    customer satisfaction, and continuous improvement in the security solutions.
+  </p>
+
+  <h2><strong>Mission</strong></h2>
+  <p>
+    Our Mission is to provide top-tier security services that ensure the safety and well-being of our clients 
+    through professionalism, innovation, and highly trained personnel. We strive to uphold integrity, 
+    reliability, and excellence in all aspects of our security.
+  </p>
+
+  <!-- Services Grid -->
+<div class="services-grid">
+  <div class="service-box">
+    <i class='bx bxs-shield-alt-2 service-icon'></i>
+    <h2><strong>Security Guarding Division</strong></h2>
+    <p>
+      We provide highly trained security personnel to safeguard businesses, homes, and industrial sites. 
+      Our guards ensure 24/7 surveillance, access control, and risk assessment for enhanced safety.
+    </p>
+  </div>
+
+  <div class="service-box">
+    <i class='bx bxs-bell-ring service-icon'></i>
+    <h2><strong>Alarm Response (Reaction Officers)</strong></h2>
+    <p>
+      Our rapid response team acts immediately to security alarms, ensuring swift intervention. 
+      Officers minimize response times with GPS tracking and communication technology.
+    </p>
+  </div>
+
+  <div class="service-box">
+    <i class='bx bxs-graduation service-icon'></i>
+    <h2><strong>Security Training Academy</strong></h2>
+    <p>
+      We offer comprehensive training for security personnel, covering defensive tactics, surveillance, 
+      and legal responsibilities. Our academy combines theory and practice for real-world readiness.
+    </p>
+  </div>
+
+  <div class="service-box">
+    <i class='bx bxs-target-lock service-icon'></i>
+    <h2><strong>Firearm Training and Competency</strong></h2>
+    <p>
+      Our firearm training programs ensure safe handling, compliance, and tactical usage. 
+      Training includes live-fire exercises, simulated threats, and firearm maintenance.
+    </p>
+
+    <h3>Types of Firearms</h3>
+    <p><strong>Pistols:</strong> Compact, one-handed firearms designed for self-defense and close-range use.</p>
+    <p><strong>Rifles:</strong> Fire a single bullet with high accuracy over long distances, featuring a rifled barrel.</p>
+  </div>
+</div>
+</main>
+
+<footer>
+  <p>Copyright &copy; 2025 Lett Security Service. All rights reserved.</p>
+</footer>
+
+        <!-- JavaScript for interactivity -->  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-icon");
+      const navbar = document.getElementById("navbar");
+      const navlinks = navbar.querySelectorAll("a");
+
+      toggle.addEventListener("click", () => {
+        navbar.classList.toggle("active");
+      });
+
+      navlinks.forEach(link => {
+        link.addEventListener("click", () => {
+          navbar.classList.remove("active");
+        });
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!navbar.contains(e.target) && !toggle.contains(e.target)) {
+          navbar.classList.remove("active");
+        }
+      });
+    });
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
